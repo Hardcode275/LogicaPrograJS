@@ -93,3 +93,50 @@ function tablaDelUno() {
 
 // Bucle que ejecuta 3 veces la función tablaDelUno()
 for (intento = 0; intento < 3; intento++) tablaDelUno();
+
+
+
+/* // Declaración
+function tablaDelUno(hasta) {
+  for (let i = 0; i <= hasta; i++) {
+    console.log("1 x", i, "=", 1 * i);
+  }
+
+// Ejecución
+tablaDelUno(10); // Tabla del 1
+tablaDelUno(5);  // Tabla del 1
+
+} */
+
+// Declaración
+function tablaMultiplicar(tabla, hasta) {
+  for (let i = 0; i <= hasta; i++) {
+    console.log(tabla, "x", i, "=", tabla * i);
+  }
+}
+
+// Ejecución
+tablaMultiplicar(1, 10); // Tabla del 1
+tablaMultiplicar(5, 10); // Tabla del 5
+
+/* tabla del 2 dinamicamente
+function tablaMultiplicar(tabla, hasta = 10) {
+  for (let i = 0; i <= hasta; i++) {
+    console.log(tabla, "x", i, "=", tabla * i);
+  }
+}
+
+// Ejecución
+tablaMultiplicar(2);      // Tabla del 2, del 0 al número 10
+tablaMultiplicar(2, 15);  // Tabla del 2, del 0 al número 15
+ */
+
+
+
+function sumar(a, b) {
+  return a + b;
+  console.log("Esta línea nunca se ejecutará");
+}
+
+const resultado = sumar(2, 3);
+console.log("Resultado:", resultado);
