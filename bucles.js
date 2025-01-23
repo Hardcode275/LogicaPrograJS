@@ -79,3 +79,17 @@ for (i = 0, j = 5; i < 5; i++, j--) {
   }
   
  */
+
+
+  for(let i = 1; i < 11 ; i++){
+    console.log('2 x', i, '=', 2 * i);
+  }
+
+// a travez de una funcion...
+  // Declaración de la función tablaDelUno()
+function tablaDelUno() {
+  for (let i = 0; i <= 10; i++) console.log("1 x", i, "=", 1 * i);
+}
+
+// Bucle que ejecuta 3 veces la función tablaDelUno()
+for (intento = 0; intento < 3; intento++) tablaDelUno();
