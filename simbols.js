@@ -164,8 +164,8 @@ const practica = {
 };
 
 (async () => {
-    for await (const num of practica) {
-        console.log(num);
+    for await (const num1 of practica) {
+        console.log(num1);
     }
 })();
 
@@ -173,6 +173,7 @@ const practica = {
     const numbers = [...counter];
     console.log(numbers)
 })();
+
 
 
 console.log('-----------------------------------------')
@@ -205,4 +206,45 @@ Number(theAnswer)   // Devuelve 42
 console.log(theAnswer);
 console.log(String(theAnswer));
 console.log(Number(theAnswer));
+
+
+
+
+console.log('-----------------------------------------')
+
+
+// ahora haremos en una forma asincronica lamada callback 
+
+const callback = {
+  start: 1,
+  end: 10,
+  [Symbol.asyncIterator]() {
+      let current = this.start;
+      const end = this.end + 1;
+      return {
+          async next() {
+              if (current < end) {
+                  return Promise.resolve({ value: current++, done: false });
+              } else {
+                  return Promise.resolve({ done: true });
+              }
+          }
+      };
+  }
+};
+
+const asyncCallback = async () => { 
+  console.log('--- Inicio de asyncCallback ---');
+  for await (const num of callback) {
+      console.log(num + " hello this is callbacks");
+  }
+  console.log('--- Fin de asyncCallback ---');
+};
+
+(async () => {
+  await asyncCallback();
+  console.log('-----------------------------------------');
+})();
+
+
 
