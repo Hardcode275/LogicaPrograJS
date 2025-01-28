@@ -96,7 +96,7 @@ switch (notaS) {
     break;
 }
 
-console.log("He obtenido un", calificacionS);
+console.log("He obtenido un", calificacionS); 
 
 
 
